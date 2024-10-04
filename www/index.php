@@ -29,7 +29,7 @@ $result = null;
 if (version_compare(PHP_VERSION, '8.0.0', '<')) {
     $result = array('error_msg' => 'This API only supports PHP 8 or higher.');
     $code = 500;
-} else if(isset($_GET['path'])) {
+} else if(isset($_GET['path']) && $_GET['path'] != null && trim($_GET['path'], ' /')) {
     $path = trim($_GET['path'], ' /');
     $pathParts = explode('/', $path);
     if(count($pathParts) > 0 && $pathParts[0] == 'healthz') {
