@@ -19,6 +19,11 @@ if(!$minVersionIgnored && file_exists('.ignoreMinVersion')) {
 $body = json_decode(file_get_contents('php://input'));
 $clientVersion = isset($body->version) ? $body->version : null;
 
+// 
+if (!isset($_GET['path']) || $_GET['path'] === null) {
+    $_GET['path'] = $_SERVER['REQUEST_URI'];
+}
+
 // Fake API
 $result = null;
 if (version_compare(PHP_VERSION, '8.0.0', '<')) {
