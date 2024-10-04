@@ -175,6 +175,11 @@ if (version_compare(PHP_VERSION, '8.0.0', '<')) {
         );
     }
 }
+else {
+    $result = array('error_msg' => 'Unknown command. Use ["healthz" | "notification" | "auth" | "ykwyhd" | "subscription" | "checkout"].');
+    $code = 404;
+}
+
 
 header('Content-Type: application/json');
 http_response_code($code);
