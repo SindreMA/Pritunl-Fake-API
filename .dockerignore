@@ -1,0 +1,23 @@
+# Documentation
+README.md
+LICENSE.md
+docs/
+
+# Docker files (not needed in the image)
+docker-compose.yml
+docker/docker-compose.yml
+docker/api-only/docker-compose.yml
+docker/Dockerfile
+
+# Server setup files
+server/
+
+# Kubernetes manifests
+*.yaml
+
+# Build scripts
+*.sh
+
+# Git
+.git
+.gitignore
