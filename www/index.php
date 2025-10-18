@@ -4,7 +4,7 @@
 // Config
 $minVersionNumber = 1003235044068;
 $minVersionName = '1.32.3504.68';
-$minVersionIgnored = false; // use this to ignore the min version check - used for the public endpoint to avoid breaking too many clients at once
+$minVersionIgnored = true; // use this to ignore the min version check - used for the public endpoint to avoid breaking too many clients at once
 $licenseCosts = 42; // insert here any price you want - "0" is a special value, which also breaks the UI ;)
 
 header('Access-Control-Allow-Origin: *'); //Allow access from everywhere...
